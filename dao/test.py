@@ -18,5 +18,5 @@ conn = psycopg2.connect(database="pydb",
                         port="5432")
 cursor = conn.cursor()
 cursor.execute('SELECT * FROM app.jsonic')
-print(cursor.fetchone())
+print(cursor.fetchall())
 do_insert(cursor,conn)
